@@ -1,0 +1,5 @@
+
+{
+  "name": "Générateur de Blagues IA",
+  "description": "Une application web qui utilise l'IA Gemini pour générer des blagues sur n'importe quel sujet, avec des informations à jour grâce à la recherche Google."
+}
