@@ -2,10 +2,10 @@
 import { GoogleGenAI } from "@google/genai";
 import type { JokeResult, GroundingChunk } from '../types';
 
-const apiKey = process.env.VITE_GEMINI_API_KEY;
+const apiKey = process.env.API_KEY;
 
 if (!apiKey) {
-  throw new Error("VITE_GEMINI_API_KEY n'est pas définie. Veuillez vérifier votre fichier .env.local");
+  throw new Error("GEMINI_API_KEY n'est pas définie. Veuillez vérifier votre fichier .env.local");
 }
 
 const ai = new GoogleGenAI({ apiKey });
