@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { generateJoke } from './services/geminiService';
 import type { JokeResult } from './types';
