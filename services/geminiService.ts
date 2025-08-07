@@ -2,7 +2,13 @@
 import { GoogleGenAI } from "@google/genai";
 import type { JokeResult, GroundingChunk } from '../types';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = process.env.API_KEY;
+
+if (!apiKey) {
+  throw new Error("GEMINI_API_KEY n'est pas définie. Veuillez vérifier votre fichier .env.local");
+}
+
+const ai = new GoogleGenAI({ apiKey });
 
 export const generateJoke = async (keyword: string): Promise<JokeResult> => {
   if (!keyword.trim()) {
