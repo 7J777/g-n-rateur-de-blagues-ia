@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         </span>
       </h1>
       <p className="mt-2 text-lg text-slate-600 dark:text-slate-400">
-        Entrez un mot-clé et laissez l'IA vous faire rire !
+        Entrez un mot-clé et laissez l'IAs vous faire rire !
       </p>
     </header>
   );
