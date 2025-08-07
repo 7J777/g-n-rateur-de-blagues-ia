@@ -3,7 +3,7 @@ import type { JokeResult, GroundingChunk } from '../types';
 const apiKey = process.env.GROQ_API_KEY;
 
 if (!apiKey) {
-  throw new Error("La clé API Groq n'est pas définie.");
+  throw new Error("La clé API Groq n'est pas définie dans les variables d'environnement.");
 }
 
 export const generateJoke = async (keyword: string): Promise<JokeResult> => {
@@ -22,7 +22,7 @@ IMPORTANT : Ne retourne QUE la blague finale. Aucune introduction, aucune explic
         'Authorization': `Bearer ${apiKey}`
       },
       body: JSON.stringify({
-        model: "openai/gpt-oss-120b",
+        model: "meta-llama/llama-4-scout-17b-16e-instruct",
         messages: [{
           role: "user",
           content: prompt
