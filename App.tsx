@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { generateJoke } from './services/geminiService';
+import { generateJoke } from './services/groqService';
 import type { JokeResult } from './types';
 import Header from './components/Header';
 import JokeCard from './components/JokeCard';
