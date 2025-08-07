@@ -3,7 +3,7 @@ import type { JokeResult, GroundingChunk } from '../types';
 const apiKey = process.env.GROQ_API_KEY;
 
 if (!apiKey) {
-  throw new Error("La clé API Groq n'est pas définie dans les variables d'environnement.");
+  throw new Error("La clé API Groq n'est pas définie.");
 }
 
 export const generateJoke = async (keyword: string): Promise<JokeResult> => {
